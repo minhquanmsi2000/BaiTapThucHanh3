@@ -1,0 +1,580 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#e6e6fa"
+    android:orientation="vertical"
+    >
+
+    <include
+        android:id="@+id/header"
+        layout="@layout/header" />
+
+    <ScrollView
+        android:background="#e6e6fa"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/header"
+        android:fillViewport="true">
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:id="@+id/uudai"
+                android:layout_width="match_parent"
+                android:layout_height="115dp"
+                android:layout_marginTop="10dp"
+                android:background="#fff"
+                android:orientation="horizontal"
+                android:padding="20dp">
+
+                <RelativeLayout
+                    android:id="@+id/relativeTichdiem"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:id="@+id/imageTichDiem"
+                        android:layout_marginTop="-15dp"
+                        android:layout_width="70dp"
+                        android:layout_height="70dp"
+                        android:layout_marginLeft="3dp"
+                        android:src="@drawable/td" />
+
+                    <TextView
+                        android:id="@+id/txtTichDiem"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/imageTichDiem"
+                        android:layout_marginLeft="5dp"
+                        android:text="Tích điểm"
+                        android:textColor="#000"
+                        android:textSize="15sp" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/relativeDathang"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
+                    android:layout_toRightOf="@+id/relativeTichdiem"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:id="@+id/imageDatHang"
+                        android:layout_width="70dp"
+                        android:layout_height="70dp"
+                        android:layout_marginTop="-15dp"
+                        android:src="@drawable/dh" />
+
+                    <TextView
+                        android:id="@+id/txtDatHang"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/imageDatHang"
+                        android:layout_marginLeft="10dp"
+                        android:text="Đặt hàng"
+                        android:textColor="#000"
+                        android:textSize="15sp" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/relativeCoupon"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
+                    android:layout_toRightOf="@+id/relativeDathang"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:id="@+id/imageCoupon"
+                        android:layout_width="70dp"
+                        android:layout_height="70dp"
+                        android:layout_marginTop="-15dp"
+                        android:src="@drawable/cp" />
+
+                    <TextView
+                        android:id="@+id/txtCoupon"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/imageCoupon"
+                        android:layout_marginLeft="10dp"
+                        android:text="Coupon"
+                        android:textColor="#000"
+                        android:textSize="15sp" />
+                </RelativeLayout>
+                <RelativeLayout
+                    android:id="@+id/relativeRewards"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
+                    android:layout_toRightOf="@+id/relativeCoupon"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:id="@+id/imageRewards"
+                        android:layout_width="70dp"
+                        android:layout_height="70dp"
+                        android:layout_marginTop="-15dp"
+                        android:src="@drawable/rewards" />
+
+                    <TextView
+                        android:id="@+id/txtReward"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/imageRewards"
+                        android:layout_marginLeft="5dp"
+                        android:text="Rewards"
+                        android:textColor="#000"
+                        android:textSize="15sp" />
+                </RelativeLayout>
+            </RelativeLayout>
+            <RelativeLayout
+                android:id="@+id/text"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/uudai"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="10dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Ưu đãi đặc biệt"
+                    android:textColor="#000"
+                    android:textSize="20sp" />
+            </RelativeLayout>
+            <HorizontalScrollView
+                android:id="@+id/horizontalList"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/uudai"
+                android:layout_marginTop="50dp"
+                android:background="#808080">
+
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginBottom="15dp">
+
+                    <RelativeLayout
+                        android:id="@+id/singleDay"
+                        android:layout_width="wrap_content"
+                        android:layout_height="300dp"
+                        android:background="#fff">
+
+                        <ImageView
+                            android:layout_width="200dp"
+                            android:layout_height="120dp"
+                            android:background="@drawable/uudai" />
+
+                        <TextView
+                            android:layout_width="200dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="120dp"
+                            android:gravity="center"
+                            android:text="TASTE OF XMAS - CHẠM VỊ GIÁNG SINH"
+                            android:textSize="20dp"
+                            android:textStyle="bold" />
+                        <TextView
+                            android:layout_width="200dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="175dp"
+                            android:layout_marginLeft="3dp"
+                            android:layout_marginRight="3dp"
+                            android:gravity="left"
+                            android:text="Không khí se lạnh len lỏi khắp ngõ ngách phố phường báo hiệu một mùa Giáng sinh nữa lại về. Giáng sinh năm nay có thể sẽ khác hơn, đặc biệt hơn sau một năm đặc biệt."
+                            android:textSize="12dp"
+                            />
+
+
+                        <Button
+                            android:layout_width="80dp"
+                            android:layout_height="35dp"
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginTop="255dp"
+                            android:background="@drawable/button"
+                            android:text="Chi tiết"
+                            android:textSize="12dp"
+                            android:textColor="#FFA500" />
+
+
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/pickUp"
+                        android:layout_width="200dp"
+                        android:layout_height="300dp"
+                        android:layout_marginLeft="215dp"
+                        android:background="#fff">
+
+                        <ImageView
+                            android:layout_width="200dp"
+                            android:layout_height="120dp"
+                            android:background="@drawable/uudai1" />
+
+                        <TextView
+                            android:layout_width="200dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="120dp"
+                            android:gravity="center"
+                            android:text="The Coffee House đồng hành cùng bạn!"
+                            android:textSize="20dp"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:layout_width="200dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="3dp"
+                            android:layout_marginTop="175dp"
+                            android:layout_marginRight="3dp"
+                            android:gravity="left"
+                            android:text="Tại The Coffee House, hành trình: Go Green được lan toả mỗi ngày bằng những hành động thiết thực mang tính cộng đồng..."
+                            android:textSize="12dp" />
+
+                        <Button
+                            android:layout_width="80dp"
+                            android:layout_height="35dp"
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginTop="255dp"
+                            android:background="@drawable/button"
+                            android:text="Chi tiết"
+                            android:textSize="12dp"
+                            android:textColor="#FFA500" />
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/hoanTien"
+                        android:layout_width="200dp"
+                        android:layout_height="300dp"
+                        android:layout_marginLeft="420dp"
+                        android:background="#fff">
+
+                        <ImageView
+                            android:layout_width="200dp"
+                            android:layout_height="120dp"
+                            android:background="@drawable/uudai2" />
+
+                        <TextView
+                            android:layout_width="200dp"
+                            android:layout_height="100dp"
+                            android:layout_marginTop="100dp"
+                            android:gravity="center"
+                            android:text="Top 10 cửa hàng The Coffee House"
+                            android:textSize="20dp"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:layout_width="200dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="3dp"
+                            android:layout_marginTop="175dp"
+                            android:layout_marginRight="3dp"
+                            android:gravity="left"
+                            android:text="Dạo quanh các con phố Hà Nội, bạn nhất định phải ghé qua 10 cửa hàng The Coffee House sau đây để vừa nhâm nhi thức uống yêu thích,..."
+                            android:textSize="12dp" />
+
+                        <Button
+                            android:layout_width="80dp"
+                            android:layout_height="35dp"
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginTop="255dp"
+                            android:background="@drawable/button"
+                            android:text="Chi tiết"
+                            android:textSize="12dp"
+                            android:textColor="#FFA500" />
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/deals"
+                        android:layout_width="200dp"
+                        android:layout_height="300dp"
+                        android:layout_marginLeft="630dp"
+                        android:background="#fff">
+
+                        <ImageView
+                            android:layout_width="200dp"
+                            android:layout_height="120dp"
+                            android:background="@drawable/uudai3" />
+
+                        <TextView
+                            android:layout_width="200dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="120dp"
+                            android:gravity="center"
+                            android:text="7 NGÀY FREE UPSIZE - YÊU BẠN NỮ"
+                            android:textSize="20dp"
+                            android:textStyle="bold" />
+                        <TextView
+                            android:layout_width="200dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="3dp"
+                            android:layout_marginTop="175dp"
+                            android:layout_marginRight="3dp"
+                            android:gravity="left"
+                            android:text="Tuần này, The Coffee House thật háo hức để gửi tặng một nửa Thế giới xinh đẹp chương trình vô cùng ngọt ngào: 7 ngày Free Upsize - ..."
+                            android:textSize="12dp" />
+
+                        <Button
+                            android:layout_width="80dp"
+                            android:layout_height="35dp"
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginTop="255dp"
+                            android:background="@drawable/button"
+                            android:text="Chi tiết"
+                            android:textSize="12dp"
+                            android:textColor="#FFA500"/>
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/muaTang"
+                        android:layout_width="200dp"
+                        android:layout_height="300dp"
+                        android:layout_marginLeft="845dp"
+                        android:layout_marginRight="15dp"
+                        android:background="#fff">
+
+                        <ImageView
+                            android:layout_width="200dp"
+                            android:layout_height="120dp"
+                            android:background="@drawable/uudai4" />
+
+                        <TextView
+                            android:layout_width="200dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="120dp"
+                            android:gravity="center"
+                            android:text="KHÔNG GIAN THE COFFEE HOUSE MỚI:"
+                            android:textSize="20dp"
+                            android:textStyle="bold" />
+                        <TextView
+                            android:layout_width="200dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="3dp"
+                            android:layout_marginTop="175dp"
+                            android:layout_marginRight="3dp"
+                            android:gravity="left"
+                            android:text="Hiện đại và sang trọng là cảm giác khách hàng sẽ cảm nhận được ngay khi bước vào những cửa hàng The Coffee House mới. "
+                            android:textSize="12dp" />
+                        <Button
+                            android:layout_width="80dp"
+                            android:layout_height="35dp"
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginTop="255dp"
+                            android:background="@drawable/button"
+                            android:text="Chi tiết"
+                            android:textSize="12dp"
+                            android:textColor="#FFA500" />
+                    </RelativeLayout>
+                </RelativeLayout>
+            </HorizontalScrollView>
+            //Text Cap nhat tu Nha
+            <RelativeLayout
+                android:id="@+id/text2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/horizontalList"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="10dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Cập nhật từ Nhà"
+                    android:textColor="#000"
+                    android:textSize="20sp" />
+            </RelativeLayout>
+
+            //List cap nhat tu nha nam ngang
+
+            <HorizontalScrollView
+                android:id="@+id/horizontalList1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/text2"
+                android:layout_marginTop="20dp"
+                android:background="#808080">
+
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginBottom="15dp">
+
+                    <RelativeLayout
+                        android:id="@+id/a"
+                        android:layout_width="wrap_content"
+                        android:layout_height="300dp"
+                        android:background="#fff">
+
+                        <ImageView
+                            android:layout_width="200dp"
+                            android:layout_height="120dp"
+                            android:background="@drawable/singleday" />
+
+                        <TextView
+                            android:layout_width="200dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="140dp"
+                            android:layout_marginRight="3dp"
+                            android:gravity="center"
+                            android:text="Single Day-Nhà mời 3 ly ngon nhất ngất ngây chỉ 111k. Nhập mã SAPCOBO tại app. Nhà mời ngay ưu đãi..."
+                            android:textSize="15sp"
+                            android:textStyle="bold" />
+
+                        <Button
+                            android:layout_width="80dp"
+                            android:layout_height="35dp"
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginTop="255dp"
+                            android:background="@drawable/button"
+                            android:text="Chi tiết"
+                            android:textSize="12dp"
+                            android:textColor="#FFA500" />
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/b"
+                        android:layout_width="200dp"
+                        android:layout_height="300dp"
+                        android:layout_marginLeft="210dp"
+                        android:background="#fff">
+
+                        <ImageView
+                            android:layout_width="200dp"
+                            android:layout_height="120dp"
+                            android:background="@drawable/pickup" />
+
+                        <TextView
+                            android:layout_width="200dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="140dp"
+                            android:layout_marginRight="3dp"
+                            android:gravity="center"
+                            android:text="Nhà mời 25%, PICKUP nha PICKUP-Chủ động đến lấy, không chờ đợi. Trải nghiệm ngay tính năng mới..."
+                            android:textSize="15dp"
+                            android:textStyle="bold" />
+
+                        <Button
+                            android:layout_width="80dp"
+                            android:layout_height="35dp"
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginTop="255dp"
+                            android:background="@drawable/button"
+                            android:text="Chi tiết"
+                            android:textSize="12dp"
+                            android:textColor="#FFA500" />
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/c"
+                        android:layout_width="200dp"
+                        android:layout_height="300dp"
+                        android:layout_marginLeft="440dp"
+                        android:background="#fff">
+
+                        <ImageView
+                            android:layout_width="200dp"
+                            android:layout_height="120dp"
+                            android:background="@drawable/ghenhieu" />
+
+                        <TextView
+                            android:layout_width="200dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="140dp"
+                            android:layout_marginRight="3dp"
+                            android:gravity="center"
+                            android:text="Ghé Nhà Càng Nhiều, Hoàn Tiền Càng Cao Giờ đây mỗi lần trải nghiệm tại Nhà của bạn đều có cơ hội được hoàn tiền ngay..."
+                            android:textSize="15dp"
+                            android:textStyle="bold" />
+
+                        <Button
+                            android:layout_width="80dp"
+                            android:layout_height="35dp"
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginTop="255dp"
+                            android:background="@drawable/button"
+                            android:text="Chi tiết"
+                            android:textSize="12dp"
+                            android:textColor="#FFA500"/>
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/d"
+                        android:layout_width="200dp"
+                        android:layout_height="300dp"
+                        android:layout_marginLeft="640dp"
+                        android:background="#fff">
+
+                        <ImageView
+                            android:layout_width="200dp"
+                            android:layout_height="120dp"
+                            android:background="@drawable/deal" />
+
+                        <TextView
+                            android:layout_width="200dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="140dp"
+                            android:layout_marginRight="3dp"
+                            android:gravity="center"
+                            android:text="Loạt Deal Xịn Sò 'Cập bến' Nhà, Đổi Ngay Thôi Ngày hội đổi BEAN lớn nhất năm Deal siêu xịn sò vẫy gọi..."
+                            android:textSize="15dp"
+                            android:textStyle="bold" />
+
+                        <Button
+                            android:layout_width="80dp"
+                            android:layout_height="35dp"
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginTop="255dp"
+                            android:background="@drawable/button"
+                            android:text="Chi tiết"
+                            android:textSize="12dp"
+                            android:textColor="#FFA500"/>
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/e"
+                        android:layout_width="200dp"
+                        android:layout_height="300dp"
+                        android:layout_marginLeft="850dp"
+                        android:layout_marginRight="15dp"
+                        android:background="#fff">
+
+                        <ImageView
+                            android:layout_width="200dp"
+                            android:layout_height="120dp"
+                            android:background="@drawable/mua3tang1" />
+
+                        <TextView
+                            android:layout_width="200dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="140dp"
+                            android:layout_marginRight="3dp"
+                            android:gravity="center"
+                            android:text="Mua 3 Tặng 1-Mời Nhóm Mình Chung Vui Chỉ cần nhập mã CUNGVUI qua app. Nhà mời ngay ưu đãi Mua 3 Tặng 1..."
+                            android:textSize="15dp"
+                            android:textStyle="bold" />
+
+                        <Button
+                            android:layout_width="80dp"
+                            android:layout_height="35dp"
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginTop="255dp"
+                            android:background="@drawable/button"
+                            android:text="Chi tiết"
+                            android:textSize="12dp"
+                            android:textColor="#FFA500"/>
+                    </RelativeLayout>
+                </RelativeLayout>
+            </HorizontalScrollView>
+        </RelativeLayout>
+    </ScrollView>
+</RelativeLayout>

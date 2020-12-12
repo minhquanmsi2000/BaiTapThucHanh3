@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:id="@+id/header"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:background="#FAF9F9">
+
+        <ImageView
+            android:id="@+id/imageView"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_marginLeft="15dp"
+            android:layout_marginTop="2dp"
+            app:srcCompat="@drawable/avatar" />
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="130dp"
+            android:layout_marginTop="28dp"
+            android:text="Lê Đình Minh Quân"
+            android:textColor="#070707"
+            android:textSize="20dp" />
+
+        <TextView
+            android:id="@+id/textView2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="130dp"
+            android:layout_marginTop="60dp"
+            android:text="VIP MEMBER"
+            android:textColor="#070707"
+            android:textSize="15dp" />
+
+        <ImageView
+            android:id="@+id/imageView2"
+            android:layout_width="45dp"
+            android:layout_height="45dp"
+            android:layout_marginLeft="350dp"
+
+            android:layout_marginTop="32dp"
+            app:srcCompat="@drawable/icon" />
+
+    </RelativeLayout>
+
+    <!-- Content below header and above footer -->
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_below="@id/header"
+        android:layout_marginTop="1dp"
+        android:layout_marginBottom="0dp"
+        android:background="#EFF3EF">
+
+        <Button
+            android:id="@+id/button"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="0dp"
+            android:layout_marginTop="10dp"
+            android:background="@android:color/background_light"
+            android:drawableLeft="@drawable/star"
+            android:freezesText="false"
+            android:gravity="left|center"
+            android:text="    The Coffee House Rewards"
+            android:textAllCaps="false"
+            android:textColorHint="#FAFBFB"
+            android:textSize="16dp" />
+
+        <Button
+            android:id="@+id/button2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="0dp"
+            android:layout_marginTop="55dp"
+            android:background="@android:color/background_light"
+            android:drawableLeft="@drawable/person"
+            android:gravity="left|center"
+
+
+            android:text="    Thông tin tài khoản"
+            android:textAllCaps="false"
+            android:textColorHint="#FAFBFB"
+            android:textSize="16dp" />
+
+        <Button
+            android:id="@+id/button3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="0dp"
+            android:layout_marginTop="100dp"
+            android:background="@android:color/background_light"
+            android:drawableLeft="@drawable/music"
+            android:gravity="left|center"
+
+            android:text="    Nhạc đang phát"
+            android:textAllCaps="false"
+            android:textColorHint="#FAFBFB"
+            android:textSize="16dp" />
+
+        <Button
+            android:id="@+id/button4"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="0dp"
+            android:layout_marginTop="145dp"
+            android:background="@android:color/background_light"
+            android:drawableLeft="@drawable/history"
+            android:gravity="left|center"
+
+            android:text="    Lịch sử"
+            android:textAllCaps="false"
+            android:textColorHint="#FAFBFB"
+            android:textSize="16dp" />
+
+        <Button
+            android:id="@+id/button5"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="0dp"
+            android:layout_marginTop="190dp"
+            android:background="@android:color/background_light"
+            android:drawableLeft="@drawable/help"
+            android:gravity="left|center"
+
+            android:text="    Giúp đỡ"
+            android:textAllCaps="false"
+            android:textColorHint="#FAFBFB"
+            android:textSize="16dp" />
+
+        <Button
+            android:id="@+id/button6"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="0dp"
+            android:layout_marginTop="235dp"
+            android:background="@android:color/background_light"
+            android:drawableLeft="@drawable/setting"
+            android:gravity="left|center"
+
+            android:text="    Cài đặt"
+            android:textAllCaps="false"
+            android:textColorHint="#FAFBFB"
+            android:textSize="16dp" />
+
+        <Button
+            android:id="@+id/button_DangXuat"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Đăng xuất"
+            android:textColor="#000"
+            android:layout_marginTop="300dp"/>
+
+    </RelativeLayout>
+
+</RelativeLayout>
